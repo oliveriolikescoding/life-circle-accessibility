@@ -26,7 +26,8 @@ CJK = "SimSun"
 if not any(CJK in f.name for f in font_manager.fontManager.ttflist):
     CJK = "Microsoft YaHei"
 plt.rcParams.update({
-    "font.family": [CJK, "Times New Roman"],
+    # 顺序要紧：先 Times New Roman（西文数字走它），中文再逐字回退到宋体
+    "font.family": ["Times New Roman", CJK],
     "axes.unicode_minus": False,
     "figure.dpi": 150,
 })
@@ -171,7 +172,7 @@ def main():
  :root {{ --ink:#1c1c1c; --muted:#666; --line:#e2e2e2; --bg:#fbfbfa; }}
  * {{ box-sizing:border-box; }}
  body {{ margin:0; padding:36px 44px 56px; background:var(--bg); color:var(--ink);
-        font-family:"SimSun","Times New Roman",serif; line-height:1.75; max-width:960px; }}
+        font-family:"Times New Roman","SimSun",serif; line-height:1.75; max-width:960px; }}
  h1 {{ font-size:26px; margin:0 0 6px; letter-spacing:.5px; }}
  .sub {{ color:var(--muted); font-size:13px; margin-bottom:26px; }}
  h2 {{ font-size:17px; margin:34px 0 10px; padding-left:9px; border-left:4px solid {accent}; }}
