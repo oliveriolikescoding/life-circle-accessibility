@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>15 分钟生活圈 · 客户视角样例</title>
+<style>
+ :root { --ink:#1c1c1c; --muted:#666; --line:#e2e2e2; --bg:#fbfbfa; }
+ * { box-sizing:border-box; }
+ body { margin:0; padding:36px 44px 56px; background:var(--bg); color:var(--ink);
+        font-family:"SimSun","Times New Roman",serif; line-height:1.75; max-width:960px; }
+ h1 { font-size:26px; margin:0 0 6px; letter-spacing:.5px; }
+ .sub { color:var(--muted); font-size:13px; margin-bottom:26px; }
+ h2 { font-size:17px; margin:34px 0 10px; padding-left:9px; border-left:4px solid #2f7d32; }
+ p { margin:8px 0; font-size:14.5px; }
+ .lead { font-size:15.5px; background:#fff; border:1px solid var(--line); padding:16px 18px;
+          margin:0 0 8px; }
+ .cards { display:flex; gap:12px; margin:16px 0 6px; }
+ .card { flex:1; background:#fff; border:1px solid var(--line); padding:12px 14px; }
+ .card b { font-size:22px; display:block; font-family:"Times New Roman",SimSun,serif; }
+ .card span { font-size:12px; color:var(--muted); }
+ table { border-collapse:collapse; width:100%; font-size:13.5px; background:#fff; margin:10px 0 4px; }
+ th, td { border-bottom:1px solid var(--line); padding:7px 9px; text-align:left; }
+ th { background:#f3f3f1; font-weight:normal; color:#444; }
+ .ok { color:#2f7d32; } .no { color:#b3392f; }
+ .unit { background:#fff; border:1px solid var(--line); padding:12px 16px; margin:10px 0; }
+ .unit h3 { margin:0 0 2px; font-size:15px; }
+ .meta { color:var(--muted); font-size:12.5px; margin:0 0 8px; }
+ .mini { font-size:13px; margin:0; }
+ figure { margin:14px 0; background:#fff; border:1px solid var(--line); padding:10px; }
+ img { width:100%; display:block; }
+ figcaption { font-size:12px; color:var(--muted); padding-top:6px; }
+ .note { font-size:12.5px; color:var(--muted); background:#fff; border:1px solid var(--line); padding:12px 16px; }
+</style></head><body>
+
+<h1>15 分钟生活圈 · 客户视角样例</h1>
+<div class="sub">成都中心城区 · 1 334 个住宅片区 · 五类日常设施 · 直线 1 000 m 口径 · 数据时点 2026-11（OpenStreetMap）</div>
+
+<div class="lead"><b>一句话结论：</b>该片区五类设施齐备的住宅片区只有
+<b>32%</b>，<b>20%</b> 的片区缺 3 类以上；最短的两块板是<b>教育</b>（可达率 53%）
+和<b>医疗</b>（57%），公园已经达到 93%，不是瓶颈。
+若要花最少的钱提升最多片区，应优先补「只差一类」的那批（见第四节）。</div>
+
+<div class="cards">
+  <div class="card"><b>1334</b><span>参与评估的住宅片区</span></div>
+  <div class="card"><b>32%</b><span>五类齐备（完备度 5）</span></div>
+  <div class="card"><b>53%</b><span>教育可达率（最低一类）</span></div>
+  <div class="card"><b>26493 ㎡</b><span>片区面积中位数</span></div>
+</div>
+
+<h2>一、这地方整体什么水平</h2>
+<figure><img src="sample_figs/档位分布.png" alt="档位分布">
+<figcaption>按完备度分档统计。绿＝五类齐备，红＝缺 4 类以上；总数与占比见右侧标注。</figcaption></figure>
+
+<h2>二、五类设施各是什么状况</h2>
+<table><tr><th>设施类别</th><th>15 分钟内可达率</th><th>判断</th></tr><tr><td>医疗</td><td>57%</td><td><span class="no">主要短板</span></td></tr><tr><td>教育</td><td>53%</td><td><span class="no">主要短板</span></td></tr><tr><td>购物</td><td>71%</td><td>已达标为主</td></tr><tr><td>公园</td><td>93%</td><td>已达标为主</td></tr><tr><td>地铁</td><td>88%</td><td>已达标为主</td></tr></table>
+<p>判断口径：可达率 ≥ 60% 视为「已达标为主」，低于此则列为主要短板。未达标单元到最近设施的中位距离：医疗 还差 568 m；教育 还差 566 m；购物 还差 551 m；公园 还差 238 m；地铁 还差 586 m</p>
+
+<h2>三、短板集中在哪里</h2>
+<figure><img src="sample_figs/缺口分布.png" alt="缺口分布">
+<figcaption>每个点是一个住宅片区，颜色为完备度档位（5＝五类齐备，4＝缺 1 类，3＝缺 2 类，2＝缺 3 类，0-1＝缺 4 类以上）。红点群就是需要优先布点的区域。</figcaption></figure>
+
+<h2>四、先从哪儿下手（只差一点就能补齐的 10 个片区）</h2>
+<table class="tbl"><tr><th>片区</th><th>完备度</th><th>最难达标类别</th><th>距 1 000 m 还差</th></tr><tr><td>观南上域.瑞苑</td><td>4/5</td><td>医疗</td><td>1 m</td></tr><tr><td>比华利国际城2期</td><td>4/5</td><td>医疗</td><td>3 m</td></tr><tr><td>川大花园(南园)</td><td>4/5</td><td>教育</td><td>4 m</td></tr><tr><td>菽香里社区</td><td>4/5</td><td>购物</td><td>5 m</td></tr><tr><td>舜苑</td><td>4/5</td><td>购物</td><td>5 m</td></tr><tr><td>金扉银苑</td><td>4/5</td><td>教育</td><td>5 m</td></tr><tr><td>书香门第</td><td>4/5</td><td>教育</td><td>8 m</td></tr><tr><td>菽香苑</td><td>4/5</td><td>购物</td><td>11 m</td></tr><tr><td>关家公寓</td><td>4/5</td><td>购物</td><td>11 m</td></tr><tr><td>比华利国际城3期</td><td>4/5</td><td>医疗</td><td>12 m</td></tr></table>
+
+<h2>五、两处具体地方，长什么样</h2>
+<p>给客户讲方案时，抽象数字要能落到一个具体片区上。下面取仓里两个真实单元：一个已齐备、一个只差一类。</p>
+<div class="unit"><h3>已达标的片区（可作对照基准）</h3>
+<p class="meta">住宅片区002 · 面积 296118 ㎡ · 完备度 5/5</p>
+<table class="mini"><tr><td>医疗</td><td>747 m</td><td class="ok">15 分钟内</td></tr><tr><td>教育</td><td>547 m</td><td class="ok">15 分钟内</td></tr><tr><td>购物</td><td>304 m</td><td class="ok">15 分钟内</td></tr><tr><td>公园</td><td>408 m</td><td class="ok">15 分钟内</td></tr><tr><td>地铁</td><td>618 m</td><td class="ok">15 分钟内</td></tr></table></div>
+<div class="unit"><h3>只差一类的片区（最值得优先补）</h3>
+<p class="meta">观南上域.瑞苑 · 面积 13678 ㎡ · 完备度 4/5</p>
+<table class="mini"><tr><td>医疗</td><td>1001 m</td><td class="no">超出 · 差 1 m</td></tr><tr><td>教育</td><td>493 m</td><td class="ok">15 分钟内</td></tr><tr><td>购物</td><td>517 m</td><td class="ok">15 分钟内</td></tr><tr><td>公园</td><td>588 m</td><td class="ok">15 分钟内</td></tr><tr><td>地铁</td><td>827 m</td><td class="ok">15 分钟内</td></tr></table></div>
+
+<h2>六、口径与免责</h2>
+<div class="note">
+① 距离为<b>直线距离</b>（UTM 48N 下计算），不是步行路网距离；跨河、跨铁路的实际步行时间会更长。<br>
+② 设施判定只看「最近设施是否在 1 000 m 内」，与设施容量、班次、开放时间无关。<br>
+③ 数据来自 OpenStreetMap（ODbL），2026-11 抓取，新开/关闭的设施未反映。<br>
+④ 底图与行政界线仅作空间参照，非法定界线。<br>
+⑤ 本页数字由 `make_client_report.py` 从 `life_circle_scores.csv` 现算，未手工改写。
+</div>
+
+<p class="sub" style="margin-top:30px">生成：`python make_client_report.py` · 数据：`life_circle_scores.csv`（1 334 行）</p>
+</body></html>
